@@ -1,0 +1,38 @@
+export const projectsData = [
+  {
+    id: 1,
+    title: "Portfolio Website",
+    description: "A responsive portfolio website built with Next.js, Tailwind CSS, and TypeScript.",
+    image: "/how-to-become-a-frontend-developer-in-2025.jpg",
+    github: "https://github.com/kencal20/portfolio.git",
+    live: "https://kencal20.vercel.app",
+    languages: ["Next.js", "TypeScript", "Tailwind CSS"],
+  },
+  {
+    id: 2,
+    title: "E-Commerce Website",
+    description: "A scalable e-commerce platform with product management and cart functionality.",
+    image: "/how-to-become-a-frontend-developer-in-2025.jpg",
+    github: "https://github.com/kencal20/e-commerce.git",
+    live: "",
+    languages: ["Next.js", "TypeScript", "Tailwind CSS", "Firebase"],
+  },
+  {
+    id: 3,
+    title: "Type Convert Wizard",
+    description: "A tool that converts JavaScript code to TypeScript with AI assistance.",
+    image: "/how-to-become-a-frontend-developer-in-2025.jpg",
+    github: "https://github.com/kencal20/type_convert_wizard.git",
+    live: "https://type-convert-wizard.vercel.app",
+    languages: ["Next.js", "TypeScript", "Monaco Editor", "Axios"],
+  },
+  {
+    id: 4,
+    title: "Notes App",
+    description: "A simple note-taking app with Next.js, Bootstrap, and Firebase authentication.",
+    image: "/how-to-become-a-frontend-developer-in-2025.jpg",
+    github: "https://github.com/kencal20/notesapp.git",
+    live: "",
+    languages: ["Next.js", "Bootstrap", "TypeScript", "Firebase"],
+  },
+];
