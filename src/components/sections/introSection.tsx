@@ -1,12 +1,9 @@
 "use client";
 
 import HeroSection from "../heroSection";
-import Image from "next/image";
 
 const fullName = process.env.NEXT_PUBLIC_USER_NAME;
-const  firstName = fullName?.split(" ")[0];
-
-
+const firstName = fullName?.split(" ")[0];
 
 export default function IntroSection() {
   return (
@@ -25,7 +22,7 @@ export default function IntroSection() {
             Web Experiences
           </h1>
 
-          <p className="text-gray-700 dark:text-gray-300 max-w-md">
+          <p className="text-gray-700 dark:text-gray-300 max-w-md mb-4">
             I’m passionate about building performant, accessible, and visually
             appealing digital products using React, Next.js, and Tailwind CSS.
           </p>
@@ -46,14 +43,21 @@ export default function IntroSection() {
           </div>
         </div>
 
-        {/* 🎨 Right Side - Image */}
-        <div className="relative w-full h-80 md:h-96 flex justify-center md:justify-end">
-          {/* <Image
-            src="https://www.michaelpage.com.au/sites/michaelpage.com.au/files/2022-01/Software%20Developer.jpg"
-            alt="Developer working illustration"
-            fill
-            className="object-cover rounded-xl shadow-lg transition-transform duration-500 hover:scale-105"
-          /> */}
+        {/* 🎨 Right Side - Professional Bio Card */}
+        <div className="flex justify-center md:justify-end">
+          <div className="bg-gradient-to-r from-white to-gray-50 dark:from-gray-900 dark:to-gray-800 px-6 py-6 rounded-3xl shadow-xl max-w-sm hover:scale-105 transition-transform duration-300">
+            <h2 className="text-xl font-semibold text-gray-800 dark:text-gray-100 mb-3">
+              {fullName}
+            </h2>
+            <p className="text-gray-700 dark:text-gray-200 text-sm leading-relaxed">
+              I am a professional frontend developer specializing in building
+              modern, responsive, and user-friendly web applications. With a
+              strong command of React, Next.js, TypeScript, and Tailwind CSS, I
+              craft high-quality, maintainable code and visually appealing
+              interfaces. I continuously explore new technologies to deliver
+              innovative and effective digital solutions.
+            </p>
+          </div>
         </div>
       </div>
     </HeroSection>

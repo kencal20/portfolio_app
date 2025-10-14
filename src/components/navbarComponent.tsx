@@ -4,6 +4,10 @@ import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import ThemeButton from "./themeButton";
 
+
+const fullName = process.env.NEXT_PUBLIC_USER_NAME;
+const firstName = fullName?.split(" ")[0];
+
 export default function NavbarComponent() {
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -12,7 +16,7 @@ export default function NavbarComponent() {
       <div className="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
         {/* Logo */}
         <a href="#home" className="text-xl font-bold text-gray-800 dark:text-gray-100">
-          MyBrand
+          {firstName}'s Portfolio
         </a>
 
         {/* Desktop Links */}
@@ -20,8 +24,11 @@ export default function NavbarComponent() {
           <a href="#home" className="text-gray-700 dark:text-gray-300 hover:text-blue-500">
             Home
           </a>
-          <a href="#about" className="text-gray-700 dark:text-gray-300 hover:text-blue-500">
-            About
+          <a href="#projects" className="text-gray-700 dark:text-gray-300 hover:text-blue-500">
+            Projects
+          </a>
+          <a href="#skills" className="text-gray-700 dark:text-gray-300 hover:text-blue-500">
+            Skills
           </a>
           <a href="#contact" className="text-gray-700 dark:text-gray-300 hover:text-blue-500">
             Contact

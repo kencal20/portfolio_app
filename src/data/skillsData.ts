@@ -1,11 +1,12 @@
 import { BsBootstrap } from "react-icons/bs";
 import { FaJs, FaNodeJs, FaReact, FaGitAlt, FaCss3Alt } from "react-icons/fa";
 import { ImHtmlFive2 } from "react-icons/im";
-import { RiTailwindCssFill } from "react-icons/ri";
+import {  RiTailwindCssFill } from "react-icons/ri";
 import { SiTypescript } from "react-icons/si";
 import { DiDatabase } from "react-icons/di";
 import { SiMongodb, SiMongoose } from "react-icons/si"; // Updated to use correct MongoDB & Mongoose logos
 import { componentTypes } from "@/types";
+import { TbBrandNextjs } from "react-icons/tb";
 
 type IconType = componentTypes["IconTypeProps"];
 
@@ -21,5 +22,5 @@ export const skillsData: IconType[] = [
   { component: BsBootstrap, color: "#7952B3", name: "Bootstrap" }, // Corrected Bootstrap color
   { component: DiDatabase, color: "#fbbc05", name: "Database" }, // Keeping generic DB color
   { component: SiMongodb, color: "#47A248", name: "MongoDB" }, // Corrected MongoDB logo & color
-  { component: SiMongoose, color: "#880000", name: "Mongoose" }, // Corrected Mongoose logo & color
+  { component: TbBrandNextjs, color: "blue", name: "Nextjs" }, // Corrected Mongoose logo & color
 ];
