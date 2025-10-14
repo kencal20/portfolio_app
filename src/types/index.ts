@@ -19,7 +19,7 @@ type projectProps = {
   id: number;
   title: string;
   description: string;
-  image: string | StaticImageData;
+  image?: string | StaticImageData;
   github: string;
   languages: string[];
   live?: string;

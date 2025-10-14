@@ -1,17 +1,12 @@
 "use client";
 
-import Image, { StaticImageData } from "next/image";
-import { ExternalLink, Github } from "lucide-react";
+import Image from "next/image";
+import {  ExternalLink, Github } from "lucide-react";
+import img from "/public/project_img.png";
+import { componentTypes } from "@/types";
 
-interface ProjectCardProps {
-    id?: number;
-    title: string;
-    description: string;
-    image: string | StaticImageData;
-    github?: string;
-    live?: string;
-    languages: string[];
-}
+type ProjectCardProps = componentTypes["projectProps"];
+
 
 export default function ProjectCard({
     title,
@@ -30,7 +25,7 @@ export default function ProjectCard({
             {/* Project Image - Fixed aspect ratio */}
             <div className="relative w-full h-48 sm:h-52 flex-shrink-0">
                 <Image
-                    src={image}
+                    src={image || img}
                     alt={title}
                     fill
                     style={{ objectFit: "cover" }}
@@ -45,7 +40,7 @@ export default function ProjectCard({
                 <h3 className="text-xl font-semibold mb-3 line-clamp-2 min-h-[3.5rem]">
                     {title}
                 </h3>
-                
+
                 {/* Description - Better text control */}
                 <p className="text-gray-600 dark:text-gray-300 text-sm mb-4 line-clamp-3 flex-grow">
                     {description}
@@ -73,7 +68,7 @@ export default function ProjectCard({
                             aria-label={`View ${title} source code on GitHub`}
                             className="flex items-center justify-center gap-1 bg-gray-200 dark:bg-gray-800 text-gray-800 dark:text-gray-200 text-sm px-3 py-2 rounded-md hover:bg-gray-300 dark:hover:bg-gray-700 transition flex-1 text-center"
                         >
-                            <Github className="w-4 h-4 flex-shrink-0" /> 
+                            <Github className="w-4 h-4 flex-shrink-0" />
                             <span className="truncate">Source</span>
                         </a>
                     )}
@@ -86,7 +81,7 @@ export default function ProjectCard({
                             aria-label={`View ${title} live demo`}
                             className="flex items-center justify-center gap-1 bg-blue-600 text-white text-sm px-3 py-2 rounded-md hover:bg-blue-700 transition flex-1 text-center"
                         >
-                            <ExternalLink className="w-4 h-4 flex-shrink-0" /> 
+                            <ExternalLink className="w-4 h-4 flex-shrink-0" />
                             <span className="truncate">Live</span>
                         </a>
                     )}
