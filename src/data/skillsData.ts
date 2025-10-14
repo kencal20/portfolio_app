@@ -4,7 +4,7 @@ import { ImHtmlFive2 } from "react-icons/im";
 import {  RiTailwindCssFill } from "react-icons/ri";
 import { SiTypescript } from "react-icons/si";
 import { DiDatabase } from "react-icons/di";
-import { SiMongodb, SiMongoose } from "react-icons/si"; // Updated to use correct MongoDB & Mongoose logos
+import { SiMongodb } from "react-icons/si"; // Updated to use correct MongoDB & Mongoose logos
 import { componentTypes } from "@/types";
 import { TbBrandNextjs } from "react-icons/tb";
 
