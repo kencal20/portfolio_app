@@ -1,62 +1,103 @@
 "use client";
 
 import { useState } from "react";
-import { Menu, X } from "lucide-react";
-import ThemeButton from "../themeButton";
+import HeroSection from "../heroSection";
+import { InputComponent } from "@/components/ui/inputComponent";
+import emailjs from "@emailjs/browser";
 
-const fullName = process.env.NEXT_PUBLIC_USER_NAME || "User";
-const firstName = fullName.split(" ")[0];
+const YOUR_SERVICE_ID = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID || "";
+const YOUR_TEMPLATE_ID = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID || "";
+const YOUR_PUBLIC_KEY = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY || "";
 
-const navLinks = [
-  { label: "Home", href: "#home" },
-  { label: "Projects", href: "#projects" },
-  { label: "Skills", href: "#skills" },
-  { label: "Contact", href: "#contact" },
-];
+interface FormState {
+  user_name: string;
+  user_email: string;
+  user_phoneNumber: string;
+  message: string;
+}
 
-export default function NavbarComponent() {
-  const [menuOpen, setMenuOpen] = useState(false);
+type StatusType = "success" | "error" | null;
+
+export default function ContactSection() {
+  const [form, setForm] = useState<FormState>({
+    user_name: "",
+    user_email: "",
+    user_phoneNumber: "",
+    message: "",
+  });
+
+  const [status, setStatus] = useState<{ message: string; type: StatusType }>({
+    message: "",
+    type: null,
+  });
+
+  const [loading, setLoading] = useState(false);
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) =>
+    setForm(prev => ({ ...prev, [e.target.name]: e.target.value }));
+
+  const validateForm = () => {
+    if (!form.user_name.trim()) return "Name is required.";
+    if (!form.message.trim()) return "Message is required.";
+    if (!form.user_email.trim() && !form.user_phoneNumber.trim())
+      return "Please provide at least an email or phone number.";
+    return "";
+  };
+
+  const sendEmail = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const errorMsg = validateForm();
+    if (errorMsg) return setStatus({ message: errorMsg, type: "error" });
+
+    setStatus({ message: "", type: null });
+    setLoading(true);
+
+    const contact_info = [form.user_email, form.user_phoneNumber].filter(Boolean).join(", ");
+
+    try {
+      await emailjs.send(YOUR_SERVICE_ID, YOUR_TEMPLATE_ID, { ...form, contact_info }, YOUR_PUBLIC_KEY);
+      setStatus({ message: "Message sent successfully!", type: "success" });
+      setForm({ user_name: "", user_email: "", user_phoneNumber: "", message: "" });
+    } catch (error) {
+      console.error("Email sending failed:", error);
+      setStatus({ message: "Failed to send message.", type: "error" });
+    } finally {
+      setLoading(false);
+    }
+  };
 
   return (
-    <nav className="bg-white dark:bg-gray-900 shadow-md sticky top-0 z-50">
-      <div className="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
-        {/* Logo */}
-        <a href="#home" className="text-xl font-bold text-gray-800 dark:text-gray-100">
-          {firstName}&apos;s Portfolio
-        </a>
+    <HeroSection
+      id="contact"
+      title="Contact Me"
+      subtitle="Let’s collaborate or chat about your project"
+      gradient="from-white to-blue-50 dark:from-slate-900 dark:to-slate-950"
+    >
+      <form
+        onSubmit={sendEmail}
+        className="flex flex-col items-center space-y-4 mx-auto w-full max-w-md"
+      >
+        {status.message && (
+          <p
+            className={`text-center ${status.type === "error" ? "text-red-500" : "text-green-500"}`}
+          >
+            {status.message}
+          </p>
+        )}
 
-        {/* Desktop Links */}
-        <div className="hidden md:flex items-center gap-6">
-          {navLinks.map(link => (
-            <a key={link.href} href={link.href} className="text-gray-700 dark:text-gray-300 hover:text-blue-500">
-              {link.label}
-            </a>
-          ))}
-          <ThemeButton />
-        </div>
+        <InputComponent label="Name" name="user_name" value={form.user_name} onChange={handleChange} className="w-80" />
+        <InputComponent label="Email" name="user_email" type="email" value={form.user_email} onChange={handleChange} className="w-80" />
+        <InputComponent label="Phone" name="user_phoneNumber" type="tel" value={form.user_phoneNumber} onChange={handleChange} className="w-80" />
+        <InputComponent label="Message" name="message" type="textarea" value={form.message} onChange={handleChange} className="w-80" />
 
-        {/* Mobile Menu Button */}
-        <button onClick={() => setMenuOpen(!menuOpen)} className="md:hidden text-gray-700 dark:text-gray-300">
-          {menuOpen ? <X size={24} /> : <Menu size={24} />}
+        <button
+          type="submit"
+          disabled={loading}
+          className="w-40 bg-blue-600 text-white p-2 rounded-md hover:bg-blue-700 transition"
+        >
+          {loading ? "Sending..." : "Send"}
         </button>
-      </div>
-
-      {/* Mobile Menu */}
-      {menuOpen && (
-        <div className="md:hidden bg-white dark:bg-gray-900 px-4 pb-4 space-y-3 transition-all duration-300">
-          {navLinks.map(link => (
-            <a
-              key={link.href}
-              href={link.href}
-              onClick={() => setMenuOpen(false)}
-              className="block text-gray-700 dark:text-gray-300"
-            >
-              {link.label}
-            </a>
-          ))}
-          <ThemeButton />
-        </div>
-      )}
-    </nav>
+      </form>
+    </HeroSection>
   );
 }
