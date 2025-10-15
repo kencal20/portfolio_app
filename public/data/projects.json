@@ -3,32 +3,49 @@
     "id": 1,
     "title": "Portfolio Website",
     "description": "A responsive portfolio website built with Next.js, Tailwind CSS, and TypeScript.",
-    "github": "https://github.com/kencal20/portfolio.git",
-    "live": "https://kencal20.vercel.app",
+    "github": "https://github.com/kencal20/portfolio_app.git",
     "languages": ["Next.js", "TypeScript", "Tailwind CSS"]
   },
   {
     "id": 2,
+    "title": "Blog App",
+    "description": "A dynamic blog platform that allows users to create, edit, and delete posts with Firebase authentication.",
+    "github": "https://github.com/kencal20/blogapp.git",
+    "live": "https://blogapp-rho-silk.vercel.app/",
+    "image": "/blogapp_img.png",
+    "languages": ["Next.js", "Bootstrap", "TypeScript", "Firebase"]
+  },
+  {
+    "id": 3,
     "title": "E-Commerce Website",
     "description": "A scalable e-commerce platform with product management and cart functionality.",
     "github": "https://github.com/kencal20/e-commerce.git",
     "live": "",
-    "languages": ["Next.js", "TypeScript", "Tailwind CSS", "Firebase"]
-  },
-  {
-    "id": 3,
-    "title": "Type Convert Wizard",
-    "description": "A tool that converts JavaScript code to TypeScript with AI assistance.",
-    "github": "https://github.com/kencal20/type_convert_wizard.git",
-    "live": "https://type-convert-wizard.vercel.app",
-    "languages": ["Next.js", "TypeScript", "Monaco Editor", "Axios"]
+    "languages": ["Vite React", "TypeScript", "Tailwind CSS", "Firebase"]
   },
   {
     "id": 4,
+    "title": "Type Convert Wizard",
+    "description": "A tool that converts JavaScript code to TypeScript with AI assistance.",
+    "github": "https://github.com/kencal20/portfolio_app.git",
+    "live": "https://type-convert-wizard.onrender.com",
+    "image": "/typewizard_img.png",
+    "languages": ["Vite React", "TypeScript", "Monaco Editor", "Axios"]
+  },
+  {
+    "id": 5,
     "title": "Notes App",
     "description": "A simple note-taking app with Next.js, Bootstrap, and Firebase authentication.",
     "github": "https://github.com/kencal20/notesapp.git",
     "live": "",
-    "languages": ["Next.js", "Bootstrap", "TypeScript", "Firebase"]
+    "languages": ["Create-React-App", "Bootstrap", "TypeScript", "Firebase"]
+  },
+  {
+    "id": 6,
+    "title": "Full-Stack ToDo List",
+    "description": "A full-stack todo list app featuring user authentication, CRUD operations, and real-time updates.",
+    "github": "https://github.com/kencal20/todo-list_fullstack",
+    "live": "",
+    "languages": ["TypeScript", "Vite React", "Node.js / Express", "MongoDB / REST API"]
   }
 ]
