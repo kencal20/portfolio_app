@@ -27,7 +27,7 @@
     "id": 4,
     "title": "Type Convert Wizard",
     "description": "A tool that converts JavaScript code to TypeScript with AI assistance.",
-    "github": "https://github.com/kencal20/portfolio_app.git",
+    "github": "https://github.com/kencal20/type_convert_wizard.git",
     "live": "https://type-convert-wizard.onrender.com",
     "image": "/typewizard_img.png",
     "languages": ["Vite React", "TypeScript", "Monaco Editor", "Axios"]
