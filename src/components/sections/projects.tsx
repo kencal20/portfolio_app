@@ -15,7 +15,6 @@ export default function ProjectsSection() {
     axios.get("/data/projects.json")
       .then(res => {
         setProjects(res.data);
-        console.log("Projects loaded:", res.data);
       })
       .catch(err => console.error("Failed to load projects:", err));
   }, []);
