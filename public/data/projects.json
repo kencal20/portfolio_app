@@ -1,51 +1,75 @@
 [
   {
     "id": 1,
-    "title": "Portfolio Website",
-    "description": "A responsive portfolio website built with Next.js, Tailwind CSS, and TypeScript.",
-    "github": "https://github.com/kencal20/portfolio_app.git",
-    "languages": ["Next.js", "TypeScript", "Tailwind CSS"]
+    "title": "React Dev Init",
+    "description": "A Bash script to scaffold React projects with Vite and Tailwind CSS.",
+    "github": "https://github.com/kencal20/reactdev-init",
+    "live": "",
+    "languages": ["Shell"]
   },
   {
     "id": 2,
-    "title": "Blog App",
-    "description": "A dynamic blog platform that allows users to create, edit, and delete posts with Firebase authentication.",
-    "github": "https://github.com/kencal20/blogapp.git",
-    "live": "https://blogapp-rho-silk.vercel.app/",
-    "image": "/blogapp_img.png",
-    "languages": ["Next.js", "Bootstrap", "TypeScript", "Firebase"]
+    "title": "Portfolio App",
+    "description": "A personal portfolio website built with JavaScript, TypeScript, and CSS.",
+    "github": "https://github.com/kencal20/portfolio_app",
+    "live": "https://portfolio-app-erbv.vercel.app/",
+    "languages": ["JavaScript", "TypeScript", "CSS", "Nextjs"]
   },
   {
     "id": 3,
-    "title": "E-Commerce Website",
-    "description": "A scalable e-commerce platform with product management and cart functionality.",
-    "github": "https://github.com/kencal20/e-commerce.git",
+    "title": "Bash Script Toolkit",
+    "description": "A collection of useful Bash scripts for automation and development tasks.",
+    "github": "https://github.com/kencal20/bash-script-toolkit",
     "live": "",
-    "languages": ["Vite React", "TypeScript", "Tailwind CSS", "Firebase"]
+    "languages": ["Shell"]
   },
   {
     "id": 4,
-    "title": "Type Convert Wizard",
-    "description": "A tool that converts JavaScript code to TypeScript with AI assistance.",
-    "github": "https://github.com/kencal20/type_convert_wizard.git",
-    "live": "https://type-convert-wizard.onrender.com",
-    "image": "/typewizard_img.png",
-    "languages": ["Vite React", "TypeScript", "Monaco Editor", "Axios"]
+    "title": "Maintenance USB Toolkit",
+    "description": "Tools for USB maintenance and system recovery using Shell and Batchfile scripts.",
+    "github": "https://github.com/kencal20/Maintenance-USB-Toolkit",
+    "live": "",
+    "languages": ["Shell", "Batchfile"]
   },
   {
     "id": 5,
-    "title": "Notes App",
-    "description": "A simple note-taking app with Next.js, Bootstrap, and Firebase authentication.",
-    "github": "https://github.com/kencal20/notesapp.git",
+    "title": "Debian Web System Startup",
+    "description": "Scripts to automate web system startup on Debian servers.",
+    "github": "https://github.com/kencal20/debian_web_system_startup",
     "live": "",
-    "languages": ["Create-React-App", "Bootstrap", "TypeScript", "Firebase"]
+    "languages": ["Shell"]
   },
   {
     "id": 6,
-    "title": "Full-Stack ToDo List",
-    "description": "A full-stack todo list app featuring user authentication, CRUD operations, and real-time updates.",
-    "github": "https://github.com/kencal20/todo-list_fullstack",
+    "title": "Rentopia App",
+    "description": "A full-stack Airb&b application using JavaScript, TypeScript, HTML, and CSS.",
+    "github": "https://github.com/kencal20/rentopia_app",
+    "live": "https://rentopia-bean.onrender.com",
+    "languages": ["JavaScript", "TypeScript", "React", "CSS", "Tailwind CSS"]
+  },
+  {
+    "id": 7,
+    "title": "Blog App",
+    "description": "A blog platform built with JavaScript, TypeScript, and CSS.",
+    "github": "https://github.com/kencal20/blogapp",
+    "live": "https://blogapp-rho-silk.vercel.app/",
+    "languages": ["JavaScript", "Nextjs", "TypeScript", "CSS"],
+    "image":"/blogapp_img.png"
+  },
+  {
+    "id": 8,
+    "title": "Todo App",
+    "description": "A full-featured todo app built with JavaScript, TypeScript, HTML, and CSS.",
+    "github": "https://github.com/kencal20/todoApp",
     "live": "",
-    "languages": ["TypeScript", "Vite React", "Node.js / Express", "MongoDB / REST API"]
+    "languages": ["JavaScript", "TypeScript", "HTML", "CSS", "React"]
+  },
+  {
+    "id": 9,
+    "title": "Salon Lounge",
+    "description": "A salon application built with JavaScript, TypeScript, HTML, and CSS.",
+    "github": "https://github.com/T-Consult/salonlounge.git",
+    "live": "https://blessings-beauty-salon.onrender.com",
+    "languages": ["JavaScript", "TypeScript", "HTML", "CSS", "Tailwind CSS", "React"]
   }
 ]
